@@ -10,7 +10,7 @@ import MLXLLM
 
 struct ContentView: View {
     private var vm = MLXViewModel(
-        modelConfiguration: ModelRegistry.llama3_2_1B_4bit
+        modelConfiguration: ModelRegistry.deepSeekR1_1_5B_4bit
     )
 
     @State private var prompt: String = ""
@@ -20,6 +20,7 @@ struct ContentView: View {
             VStack {
                 ScrollView {
                     Text(vm.output)
+                        .textSelection(.enabled)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
 

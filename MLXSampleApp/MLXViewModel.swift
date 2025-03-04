@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Hub
 import MLXLLM
 import MLXLMCommon
 
@@ -26,9 +27,12 @@ class MLXViewModel {
         self.modelConfiguration = modelConfiguration
     }
 
+    private let hub = HubApi(downloadBase: URL.downloadsDirectory.appending(path: "huggingface"))
+
     private func loadModel() async {
         do {
             modelContainer = try await LLMModelFactory.shared.loadContainer(
+                hub: hub, // Comment out here if you want to use default download directory.
                 configuration: modelConfiguration
             ) { progress in
                 Task { @MainActor in
