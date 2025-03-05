@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FAC3BBB2D746A0B00F731C6 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 0FAC3BBA2D746A0B00F731C6 /* MLXLLM */; };
+		0FF5DF192D773C9000E882B4 /* MLXVLM in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF5DF182D773C9000E882B4 /* MLXVLM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF5DF192D773C9000E882B4 /* MLXVLM in Frameworks */,
 				0FAC3BBB2D746A0B00F731C6 /* MLXLLM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				0FA88C3E2D71E675001EC521 /* MLXSampleApp */,
+				0FF5DF172D773C9000E882B4 /* Frameworks */,
 				0FA88C3D2D71E675001EC521 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +51,13 @@
 				0FA88C3C2D71E675001EC521 /* MLXSampleApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0FF5DF172D773C9000E882B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +81,7 @@
 			name = MLXSampleApp;
 			packageProductDependencies = (
 				0FAC3BBA2D746A0B00F731C6 /* MLXLLM */,
+				0FF5DF182D773C9000E882B4 /* MLXVLM */,
 			);
 			productName = MLXSampleApp;
 			productReference = 0FA88C3C2D71E675001EC521 /* MLXSampleApp.app */;
@@ -358,6 +369,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0FAC3BB92D746A0B00F731C6 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
 			productName = MLXLLM;
+		};
+		0FF5DF182D773C9000E882B4 /* MLXVLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FAC3BB92D746A0B00F731C6 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXVLM;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
